@@ -1,0 +1,35 @@
+.theme-switch {
+	--diameter: 2rem;
+	--spacing: 0.3rem;
+	inline-size: calc(var(--diameter) * 2 + var(--spacing) * 2); /* width */
+	block-size: calc(var(--diameter) + var(--spacing) * 2); /* height */
+	border: none;
+	cursor: pointer;
+	background: var(--clr-toggle);
+	color: var(--clr-text);
+	position: relative;
+	border-radius: 100vh;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	transition:
+		background-color 0.4s ease-in-out,
+		color 0.4s ease-in-out;
+}
+
+.theme-switch[aria-pressed='true'] {
+	--is-active: 1;
+}
+
+.theme-switch::before {
+	--offset: calc(100% - var(--diameter) - var(--spacing) * 2);
+	content: '';
+	position: absolute;
+	inset-inline-start: calc(var(--spacing) + var(--offset) * var(--is-active, 0)); /* left */
+	inset-block-start: var(--spacing); /* top */
+	border-radius: 100vh;
+	inline-size: var(--diameter); /* width */
+	block-size: var(--diameter); /* height */
+	background: #ffffff;
+	transition: inset-inline-start 0.4s ease-in-out; /* left */
+}

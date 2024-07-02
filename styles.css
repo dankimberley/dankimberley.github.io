@@ -1,50 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* "DM Sans" */ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* "Roboto" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* "Poppins" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* "Karla" */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* "Space Mono" */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --blue: #0A0F24;
     --white: #FAE3CF;
     --orange: #FA8603;
     --red: #BB2233;
-    font-family: 'DM Sans', sans-serif;
+    --clr-background: #efefef;
+	--clr-text: #333333;
+	--clr-toggle: #e9c46a;
+    --clr-border: black
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    box-sizing: border-box;
+}
+
+:root[data-theme='dark'] {
+	--clr-background: var(--blue);
+	--clr-text: var(--white);
+	--clr-toggle: #345b6f;
+    --clr-border: var(--white)
 }
 
 body {
-    background-color: var(--blue);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
+    background-color: var(--clr-background);
+    transition: background-color 300ms;
+    font-family: 'DM Sans';
 }
 
-#container {
-    max-width: 60ch;
-    color: var(--orange);
+body {
+    /* background-color: red; */
+    margin: 0;
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: 1fr min(70ch, 100%) 1fr;
+    color: var(--clr-text);
 }
 
-#container>h2 {
-    color: var(--red);
-
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-a {
-    color: var(--white);
-}
-
-li {
-    transition: all 200ms;
-}
-
-li + li {
-    margin-top: 10px;
-  }
-
-li:hover {
-    transform: scale(110%);
-    transform: translateX(1rem);
-}
