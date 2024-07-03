@@ -33,13 +33,16 @@
 
 const handleBurger = () => {
     const x = document.getElementById('myLinks')
+    const head = document.querySelector('header')
     if (x.style.display === "flex") {
         setTimeout(() => x.style.display = "none", 300)
-        setTimeout(() => x.style.zIndex = "1", 300)
+        setTimeout(() => head.style.zIndex = "0", 300)
         x.classList.remove('appear')
         x.classList.add('disappear')
       } else {
+        console.log('loading now')
         x.style.display = "flex";
+        head.style.zIndex = "1000"
         x.classList.add('appear')
         x.classList.remove('disappear')
       }

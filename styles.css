@@ -50,7 +50,7 @@ body {
 a.icon {
     color: var(--clr-text);
     font-size: 28px;
-    padding-top: 4%;
+    padding-top: 5%;
     padding-bottom: 2%;
 }
 
@@ -62,6 +62,11 @@ a.icon {
     background-color: var(--clr-background);
     height: 200px;
     width: min(35ch, 100%)
+}
+
+#myLinks>a {
+    font-family: 'Space Mono';
+    color: var(--clr-text);
 }
 
 header {
