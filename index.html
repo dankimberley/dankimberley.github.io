@@ -8,9 +8,20 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="themeSwitch.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="preload">
     <div id="container">
+      <header>
+        <a href="javascript:void(0);" class="icon" onclick="handleBurger()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+      </header>
         <div id="intro">
           <div id="name">
             <h1>Dan Kimberley</h1>
@@ -18,7 +29,7 @@
           <div id="home-picture">
             <img src="profile.jpg" alt="Dan Kimberley" />
           </div>
-          <div id="description"><a href="/music.html">musician</a> 🥁 and <a href="">developer</a> 💻</div>
+          <div id="description"><a href="/music.html" id="musician-anchor">musician</a> 🥁 and <a href="" id="developer-anchor">developer</a> 💻</div>
         </div>
         <button
         class="theme-switch"
