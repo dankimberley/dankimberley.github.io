@@ -24,6 +24,9 @@
 	const btn = document.querySelector( `.theme-switch` );
 	if ( ! btn ) return;
 	btn.addEventListener( 'click', onToggleTheme, false );
+
+    const x = document.getElementById('myLinks')
+    x.style.display = "none";
   
   
 } )();
@@ -31,10 +34,13 @@
 const handleBurger = () => {
     const x = document.getElementById('myLinks')
     if (x.style.display === "flex") {
-        x.style.display = "none";
+        setTimeout(() => x.style.display = "none", 300)
+        setTimeout(() => x.style.zIndex = "1", 300)
         x.classList.remove('appear')
+        x.classList.add('disappear')
       } else {
         x.style.display = "flex";
         x.classList.add('appear')
+        x.classList.remove('disappear')
       }
 }
