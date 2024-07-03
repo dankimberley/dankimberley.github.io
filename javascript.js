@@ -27,3 +27,14 @@
   
   
 } )();
+
+const handleBurger = () => {
+    const x = document.getElementById('myLinks')
+    if (x.style.display === "flex") {
+        x.style.display = "none";
+        x.classList.remove('appear')
+      } else {
+        x.style.display = "flex";
+        x.classList.add('appear')
+      }
+}

@@ -47,3 +47,48 @@ body {
     color: var(--clr-text);
 }
 
+a.icon {
+    color: var(--clr-text);
+    font-size: 28px;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+#myLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--clr-background);
+    height: 200px;
+    width: min(35ch, 100%)
+}
+
+header {
+    /* background-color: red; */
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appear {
+    animation: slideInFromTop 300ms;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
