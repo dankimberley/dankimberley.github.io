@@ -64,6 +64,11 @@ a.icon {
     width: min(35ch, 100%)
 }
 
+#myLinks>a {
+    font-family: 'Space Mono';
+    color: var(--clr-text);
+}
+
 header {
     /* background-color: red; */
     height: 60%;
